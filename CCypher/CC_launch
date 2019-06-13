@@ -1,7 +1,0 @@
-#!/bin/bash
-
-chmod +x /Applications/CCypher/CCypherGUI.py
-chmod +x /Applications/CCypher/CC_functions
-
-/Applications/CCypher/CCypherGUI.py &
-exit
