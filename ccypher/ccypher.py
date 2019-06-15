@@ -22,10 +22,10 @@ def clickRun():
     try:
         if g.get() == 1:
             outputText = superEncrypt(enteredText)
-            outLabel.configure(text="Output: Encrypted")
+            outLabel.configure(text="Output:Encrypted")
         elif g.get() == 2:
             outputText = superEncrypt(enteredText, 'decrypt')
-            outLabel.configure(text="Output: Decrypted")
+            outLabel.configure(text="Output:Decrypted")
     except:
         if enteredText == '':
             outputText = "No text entered. \nPlease enter some text and try again."
@@ -81,10 +81,14 @@ def copySel(event):
 def pasteSel(event):
     thisPaste = pyperclip.paste()
     event.widget.insert(INSERT, thisPaste)
+
+# Blank Row
+inLabel = Label(window, text="", bg="white", fg="white", font="none 12 bold")
+inLabel.grid(row=5, column=0, sticky=W)
     
 # Input text box label
 inLabel = Label(window, text="Input: Origional Text", bg="white", fg="black", font="none 12 bold")
-inLabel.grid(row=6, column=0, sticky=W)
+inLabel.grid(row=7, column=0, sticky=W)
 
 # Input text box
 inBox = Text(window, width=40, height=6, wrap=WORD, bg="white")
@@ -99,15 +103,15 @@ clearInButton.grid(row=7, column=1, sticky=W)
 
 # 'Clear Outbox Text' Button
 clearOutButton = Button(window, text="CLEAR", width=6, command=clearOutBox)
-clearOutButton.grid(row=7, column=4, sticky=W)
+clearOutButton.grid(row=7, column=4, sticky=E)
 
 # 'Run' Button
 runButton = Button(window, text="RUN", width=6, command=clickRun)
 runButton.grid(row=8, column=2, sticky=W)
 
 # Output text box label
-outLabel = Label(window, text="Output:", bg="white", fg="black", font="none 12 bold")
-outLabel.grid(row=6, column=3, sticky=W)
+outLabel = Label(window, text="Output:Encrypted", bg="white", fg="black", font="none 12 bold")
+outLabel.grid(row=7, column=3, sticky=W)
 
 # Output text box
 outBox = Text(window, width=40, height=6, wrap=WORD, bg="white",)
@@ -118,7 +122,7 @@ outBox.bind("<Command-C>", copySel)
 
 # 'Copy Output' Button
 copyOutButton = Button(window, text="COPY", width=6, command=copyOut)
-copyOutButton.grid(row=7, column=3, sticky=W)
+copyOutButton.grid(row=7, column=4, sticky=W)
 
 # Cypher Encrypt/Decrypt Label
 cLabel = Label(window, text="Encryption Type: ", bg="white", fg="black", font="none 12 bold")
@@ -145,8 +149,12 @@ b2 = Radiobutton(window, text="Cypher Off", variable=v, command=buttonConfig, va
 b.grid(row=3, column=0, sticky=W)
 b2.grid(row=4, column=0, sticky=W)
 
+# Blank Row
+inLabel = Label(window, text="", bg="white", fg="white", font="none 12 bold")
+inLabel.grid(row=9, column=0, sticky=W)
+
 # Exit label
-Label(window, text="Click to exit", bg="white", fg="black", font="none 12 bold") .grid(row=9, column=0, sticky=NS)
+Label(window, text="Click to exit", bg="white", fg="black", font="none 12 bold") .grid(row=10, column=0, sticky=NS)
 
 # Exit function
 def close_window():
@@ -154,7 +162,7 @@ def close_window():
     sys.exit()
 
 # Add an exit button
-Button(window, text="EXIT", width=10, command=close_window) .grid(row=10, column=0, sticky=NS)
+Button(window, text="EXIT", width=10, command=close_window) .grid(row=11, column=0, sticky=NS)
 
 # Weight added to widgets in widow
 
