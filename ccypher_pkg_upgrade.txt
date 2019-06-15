@@ -1,0 +1,14 @@
+# Change to root directory of package file.
+
+cd /Users/<USERNAME>/Desktop/ccypher # << Example
+
+# Run below script.
+python setup.py sdist
+
+# After running above script, enter username and password.
+# Make sure 'twine' is installed.
+# In case you need to know the 'twine' install command:
+# 'pip install twine'
+
+# Then, run the below script to update package.
+twine upload dist/*
