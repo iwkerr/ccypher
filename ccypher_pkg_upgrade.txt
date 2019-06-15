@@ -9,7 +9,7 @@ python setup.py sdist
 # In case you need to know the 'twine' install command:
 # 'pip install twine'
 
-# After running above script, enter username and password.
-
 # Then, run the below script to update package.
 twine upload dist/*
+
+# After running above script, enter username and password.
