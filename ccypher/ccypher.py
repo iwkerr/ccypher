@@ -125,8 +125,8 @@ cLabel = Label(window, text="Encryption Type: ", bg="white", fg="black", font="n
 cLabel.grid(row=2, column=1, sticky=W)
 
 # Cypher Encrypt/Decrypt Buttons
-c = Radiobutton(window, text="Encrypt Entered Text", variable=g, value=1, bg="white", fg="black")
-c2 = Radiobutton(window, text="Decrypt Entered Text", variable=g, value=2, bg="white", fg="black")
+c = Radiobutton(window, text="Encrypt Input Text", variable=g, value=1, bg="white", fg="black")
+c2 = Radiobutton(window, text="Decrypt Input Text", variable=g, value=2, bg="white", fg="black")
 c.grid(row=3, column=1, sticky=W)
 c2.grid(row=4, column=1, sticky=W)
 
