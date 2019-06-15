@@ -1,4 +1,8 @@
-#!/usr/bin/env python
+#!/bin/bash
 
-from ccfunctions import *
-from ccypher import *
+chmod +x ccypher/ccypher.py
+chmod +x ccypher/ccfunctions.py
+
+ccypher/ccypher.py &
+exit
+
